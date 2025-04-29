@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Help - Airbnb Mockup</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+      padding: 100px 20px 40px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Fixed Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .faq-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #3498db;
+    }
+
+    details {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    details:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    summary {
+      font-size: 1.2rem;
+      font-weight: 600;
+      list-style: none;
+      position: relative;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '➤';
+      position: absolute;
+      right: 0;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(90deg);
+    }
+
+    details p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .contact-support {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .contact-support h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #2980b9;
+    }
+
+    /* DARK MODE */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #121212;
+        color: #f0f0f0;
+      }
+
+      .navbar {
+        background-color: rgba(18, 18, 18, 0.9);
+      }
+
+      header h1,
+      .contact-support h2 {
+        color: #ffffff;
+      }
+
+      header p,
+      details p {
+        color: #cccccc;
+      }
+
+      .faq-section h2 {
+        color: #74b9ff;
+      }
+
+      details {
+        background: #1e1e1e;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+      }
+
+      details:hover {
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      }
+
+      .contact-button {
+        background-color: #74b9ff;
+      }
+
+      .contact-button:hover {
+        background-color: #0984e3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">← Back to Home</a>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Need Help? We're Here for You.</h1>
+      <p>Find answers to common questions or contact our support team for personalized assistance. We're always happy to help!</p>
+    </header>
+
+    <section class="faq-section">
+      <h2>Booking a Stay</h2>
+      <details>
+        <summary>How do I book a property?</summary>
+        <p>Search for your destination, choose your perfect stay, select your dates, and click "Book Now" to send a request to the host.</p>
+      </details>
+      <details>
+        <summary>Can I cancel or modify my booking?</summary>
+        <p>Yes, go to 'My Trips' to manage your bookings. Cancellation and modification policies may vary based on the host's rules.</p>
+      </details>
+
+      <h2>Hosting Your Home</h2>
+      <details>
+        <summary>How do I list my property?</summary>
+        <p>Sign in to your account, click "Become a Host," and follow the easy steps to create your listing.</p>
+      </details>
+      <details>
+        <summary>When do I get paid?</summary>
+        <p>Payments are released 24 hours after the guest checks in. You can choose from multiple payout methods!</p>
+      </details>
+
+      <h2>Account & Security</h2>
+      <details>
+        <summary>How do I update my profile information?</summary>
+        <p>Go to your account settings to edit your personal details, update your photo, and verify your email or phone number.</p>
+      </details>
+      <details>
+        <summary>What should I do if I forgot my password?</summary>
+        <p>Click "Forgot Password" on the login page and follow the steps to reset it via email.</p>
+      </details>
+    </section>
+
+    <section class="contact-support">
+      <h2>Still need help?</h2>
+      <a href="contact.html" class="contact-button">Contact Support</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('page-loaded');
+    });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+
+    flatpickr("input[type='text']", {
+      dateFormat: "d/m/Y",
+      minDate: "today"
+    });
+  </script>
+</body>
+</html>
